@@ -26,17 +26,25 @@ a {
 header {
   background-color: black;
   overflow: hidden;
-  height: 100vh;
+  padding-bottom: 50px;
 }
+
 .container .nav {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+.nav__menu i {
+  color: crimson;
+  cursor: pointer;
+  display: none;
+}
 .nav .nav__menu ul li {
   display: inline-block;
+}
+.nav .nav__menu ul li:first-child {
+  display: none;
 }
 .nav .nav__menu ul li a {
   color: white;
@@ -52,9 +60,15 @@ header {
   padding: 8px 30px;
   background-color: crimson;
   color: white;
-  border: 1px solid crimson;
+  border: 2px solid crimson;
   font-size: 16px;
   border-radius: 5px;
+  transition: all 0.4s ease;
+}
+.nav .nav__btn a:hover {
+  background-color: transparent;
+  border: 2px solid crimson;
+  color: crimson;
 }
 .nav .nav__btn a i {
   margin-right: 10px;
@@ -82,13 +96,14 @@ header .container .copa .copa__left__content a {
   border-radius: 5px;
   margin-top: 30px;
   display: inline-block;
+  transition: all 0.4s ease;
 }
 header .container .copa .copa__left__content a i {
   margin-left: 10px;
-  display: none;
 }
-header .container .copa .copa__left__content a:hover i {
-  display: inline-block;
+header .container .copa .copa__left__content a:hover {
+  background-color: transparent;
+  color: crimson;
 }
 
 header .container .copa .copa__left__content h1 {
@@ -101,8 +116,16 @@ header .container .copa .copa__right__content {
 }
 header .container .copa .copa__right__content .image img {
   width: 100%;
+  animation: rotation 15s ease-in-out infinite;
 }
-
+@keyframes rotation {
+  100% {
+    transform: rotate(15deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+}
 /****************************\
     All players part styling
 \****************************/
@@ -121,6 +144,7 @@ header .container .copa .copa__right__content .image img {
   border-radius: 10px;
   padding: 15px;
   margin: 15px;
+  height: 450px;
 }
 
 .players__list .card img {
@@ -138,7 +162,7 @@ header .container .copa .copa__right__content .image img {
 }
 
 /****************************\
-    All players part styling
+    copa hilghts part styling
 \****************************/
 
 .hilights {
@@ -186,9 +210,77 @@ header .container .copa .copa__right__content .image img {
 }
 
 /**********************************\
-    Footer Football part styling
+    Top goal part styling
 \**********************************/
 
+.top_goal {
+  margin-top: 150px;
+  text-align: center;
+}
+.top_goal h2 {
+  text-align: center;
+  color: crimson;
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+}
+.top_goal span {
+  color: #969bab;
+  display: inline-block;
+  margin: 20px 5px;
+}
+.history {
+  background-image: url(images/messi.jpeg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(214, 240, 245);
+}
+.top__goal__content {
+  text-align: center;
+}
+/**********************************\
+    bonus part styling
+\**********************************/
+.bonus__section {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+}
+.bonus__section .bonus {
+  width: 50%;
+}
+.bonus__section .bonus img {
+  width: 90%;
+  float: left;
+}
+.bonus__section .bonus__content {
+  width: 40%;
+  padding-left: 40px;
+}
+.bonus__section .bonus__content h1 {
+  font-size: 3rem;
+  color: #3c3c3c;
+}
+.bonus__section .bonus__content h1 span {
+  color: crimson;
+}
+.bonus__section .bonus__content p {
+  font-size: 15px;
+  color: #3c3c3c;
+  margin-top: 20px;
+  line-height: 25px;
+}
+/**********************************\
+    Footer Football part styling
+\**********************************/
+footer {
+  padding-bottom: 10px;
+}
 .football {
   margin-top: 150px;
 }
@@ -201,7 +293,7 @@ header .container .copa .copa__right__content .image img {
   width: 100%;
 }
 .football .social_icons {
-  margin-top: 30px;
+  margin-top: 20px;
   display: block;
   text-align: center;
 }
@@ -212,7 +304,167 @@ header .container .copa .copa__right__content .image img {
 }
 .football .copyright p {
   text-align: center;
-  color: #3c3c3c;
+  color: #969bab;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+/**********************************\
+   Responsive media query
+\**********************************/
+
+@media screen and (max-width: 1184px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1052px) {
+  .players__list .card {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 967px) {
+  header .container .copa .copa__left__content h1 {
+    font-size: 2.5rem;
+  }
+  .copa__higiligts .left__content h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 835px) {
+  .copa__higiligts .right__content {
+    width: 50%;
+  }
+  .nav .nav__menu ul {
+    display: none;
+  }
+  .nav__menu i {
+    display: block;
+  }
+  .bonus__section .bonus__content h1 {
+    font-size: 2.5rem;
+    color: #3c3c3c;
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 665px) {
+  .copa__higiligts .left__content h1 {
+    font-size: 2rem;
+  }
+  .nav .nav__btn .login a {
+    padding: 5px;
+    font-size: 12px;
+  }
+  header {
+    padding-bottom: 0px;
+  }
+  header .container .copa {
+    margin-top: 70px;
+    display: block;
+  }
+  header .container .copa .copa__left__content {
+    text-align: left;
+    width: 100%;
+  }
+  header .container .copa .copa__left__content a {
+    padding: 7px;
+    font-size: 12px;
+  }
+  header .container .copa .copa__left__content h1 {
+    font-size: 2.5rem;
+  }
+  header .container .copa .copa__right__content {
+    width: 100%;
+    margin-top: 70px;
+  }
+
+  /**********************************\
+   Players  media query
+\**********************************/
+
+  .all_players {
+    margin-top: 50px;
+  }
+  .all_players .container .players__list {
+    display: block;
+    text-align: left;
+  }
+  .all_players .container .players__list .card {
+    margin-left: 0px;
+    width: 90%;
+  }
+  .all_players .container .players__list .card img {
+    width: 100%;
+  }
+
+  /**********************************\
+   heilight  media query
+\**********************************/
+  .hilights {
+    margin-top: 50px;
+  }
+  .hilights .container .copa__higiligts {
+    display: block;
+  }
+  .hilights .container .copa__higiligts .left__content {
+    width: 100%;
+  }
+  .hilights .container .copa__higiligts .left__content a {
+    margin-bottom: 50px;
+  }
+  .hilights .container .copa__higiligts .right__content {
+    width: 100%;
+  }
+  .top_goal {
+    margin-top: 50px;
+  }
+  .top_goal h2 {
+    font-size: 2rem;
+  }
+
+  /**********************************\
+   Footer  media query
+\**********************************/
+  .football {
+    margin-top: 50px;
+  }
+  .football .container .image {
+    width: 60%;
+  }
+  .football .container .social_icons i {
+    margin: 5px;
+    font-size: 15px;
+  }
+  .football .container .copyright p {
+    color: #969bab;
+  }
+  .bonus__section {
+    margin-top: 50px !important;
+  }
+  .bonus__section .bonus__content {
+    padding-left: 10px;
+  }
+  .bonus__section .bonus__content {
+    width: 50%;
+  }
+  .bonus__section .bonus__content h1 {
+    font-size: 0.9rem;
+    color: #3c3c3c;
+  }
+  .bonus__section .bonus__content p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+.bonus__section {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+.bonus__section .bonus {
+  width: 50%;
+}
+.bonus__section .bonus img {
+  width: 90%;
+  float: left;
 }
