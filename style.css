@@ -116,7 +116,7 @@ header .container .copa .copa__right__content .image img {
   flex-wrap: wrap;
 }
 .players__list .card {
-  width: 25%;
+  width: 27%;
   box-shadow: 0px 0px 10px rgb(214, 240, 245);
   border-radius: 10px;
   padding: 15px;
@@ -135,4 +135,84 @@ header .container .copa .copa__right__content .image img {
   font-size: 16px;
   color: #3c3c3c;
   margin-top: 10px;
+}
+
+/****************************\
+    All players part styling
+\****************************/
+
+.hilights {
+  margin-top: 150px;
+}
+.copa__higiligts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.copa__higiligts .left__content {
+  width: 45%;
+}
+.copa__higiligts .left__content h1 {
+  font-size: 3.5rem;
+  color: #3c3c3c;
+}
+.copa__higiligts .left__content p {
+  font-size: 16;
+  color: #3c3c3c;
+  margin-top: 20px;
+}
+.copa__higiligts .left__content a {
+  padding: 8px 30px;
+  background-color: crimson;
+  color: white;
+  border: 1px solid crimson;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: inline-block;
+}
+.copa__higiligts .right__content {
+  width: 40%;
+}
+.copa__higiligts .right__content .image {
+  width: 100%;
+  height: 100%;
+}
+.copa__higiligts .right__content .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(214, 240, 245);
+}
+
+/**********************************\
+    Footer Football part styling
+\**********************************/
+
+.football {
+  margin-top: 150px;
+}
+.football .image {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+.football .image img {
+  width: 100%;
+}
+.football .social_icons {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+}
+.football .social_icons i {
+  color: #969bab;
+  font-size: 20px;
+  margin: 10px;
+}
+.football .copyright p {
+  text-align: center;
+  color: #3c3c3c;
+  font-size: 14px;
+  margin-top: 20px;
 }
